@@ -83,4 +83,60 @@ total_sales IS NULL;
 ```
 3. Data Analysis & Findings <br>
 The following SQL queries were developed to answer specific business questions: <br>
+- Write a SQL query to retrieve all columns for sales made on '2022-08-09':
+```sql
+SELECT * 
+FROM retail_sales 
+WHERE sale_date = '2022-08-09';
+```
+- Write a SQL query to retrieve all transactions where the category is 'Clothing' and the quantity sold is more than 3 in the month of Nov-2022:
+```sql
+SELECT * 
+FROM retail_sales 
+WHERE category = 'clothing' AND 
+quantity > 3 AND 
+MONTH(sale_date) = 11 ;
+```
+- Write a SQL query to calculate the total sales (total_sale) for each category.
+```sql
+SELECT category, SUM(total_sales) AS net_sales, COUNT(*) AS total_orders
+FROM retail_sales
+GROUP BY category;
+```
+- Write a SQL query to find the average age of customers who purchased items from the 'Electronics' category.
+```sql
+SELECT category, AVG(age) 
+FROM retail_sales 
+GROUP BY category
+HAVING category = 'Electronics';
+```
+- Write a SQL query to find all transactions where the total_sale is greater than 1000.
+```sql
+SELECT *
+FROM retail_sales
+WHERE total_sales > 1000;
+```
+- Write a SQL query to find the total number of transactions (transaction_id) made by each gender in each category.
+```sql
+SELECT gender, category, COUNT(*) AS total_transactions
+FROM retail_sales 
+GROUP BY gender, category
+ORDER BY gender;
+```
+- Write a SQL query to calculate the average sale for each month. Find out best selling month in each year.
 
+
+- Write a SQL query to find the top 10 customers based on the highest total sales.
+```sql
+SELECT customer_id, COUNT(total_sales) 
+FROM retail_sales
+GROUP BY customer_id
+ORDER BY COUNT(total_sales) DESC
+LIMIT 10;
+```
+- Write a SQL query to find the number of unique customers who purchased items from each category.
+```sql
+SELECT category, COUNT(DISTINCT customer_id) as unique_customers
+FROM retail_sales
+GROUP BY category;
+```
