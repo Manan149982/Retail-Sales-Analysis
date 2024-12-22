@@ -155,9 +155,9 @@ GROUP BY category;
 
 ## Key Achievements
 
--Developed SQL queries to calculate KPIs like total sales, average order value, and sales by category.
--Identified top-performing products and customer segments to recommend targeted marketing strategies.
--Optimized query performance to handle large datasets efficiently.
+- Developed SQL queries to calculate KPIs like total sales, average order value, and sales by category.
+- Identified top-performing products and customer segments to recommend targeted marketing strategies.
+- Optimized query performance to handle large datasets efficiently.
 
 ## Conclusion
 
