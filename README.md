@@ -15,6 +15,21 @@ Business Analysis: Use SQL to answer specific business questions and derive insi
 - The projects starts by creating a database named `sql_project_1`
 - Then created a table named `retail_sales`
 - The table structure includes columns for transaction ID, sale date, sale time, customer ID, gender, age, product category, quantity sold, price per unit, cost of goods sold (COGS), and total sale amount.
-  
+```sql
+CREATE DATABASE sql_project_1;
+USE sql_project_1;
+CREATE TABLE retail_sales (
+transaction_id INT PRIMARY KEY,
+sale_date DATE,
+sale_time TIME,
+customer_id INT,
+gender VARCHAR(10),
+age INT,
+category VARCHAR(50),
+quantity INT,
+price_per_unit FLOAT,
+cogs FLOAT,
+total_sales FLOAT
+);
  
 
