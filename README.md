@@ -1,4 +1,3 @@
 # Retail-Sales-Analysis
 Project Title: Retail Sales Analysis
-Level: Beginner
-Database: 
+Database: sql_project_1
